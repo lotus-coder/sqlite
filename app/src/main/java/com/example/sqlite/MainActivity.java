@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
         btnBiblioteca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(MainActivity.this, BibliotecaActivity.class);
+                startActivity(i);
             }
         });
         btnAgenda.setOnClickListener(new View.OnClickListener() {
