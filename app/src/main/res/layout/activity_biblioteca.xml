@@ -11,50 +11,86 @@
         android:id="@+id/lvBiblioteca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditarTrue" />
 
     <TextView
-        android:id="@+id/ed1"
+        android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="78dp" />
+        android:layout_margin="50sp"
+        android:text="Autor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/et1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="120dp"/>
+        app:layout_constraintBottom_toBottomOf="@id/tv1"
+        app:layout_constraintStart_toEndOf="@id/tv1"
+        app:layout_constraintStart_toStartOf="@+id/et2"
+        app:layout_constraintTop_toTopOf="@id/tv1" />
+
     <TextView
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="120dp" />
+        android:layout_margin="50sp"
+        android:text="Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
     <EditText
         android:id="@+id/et2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="120dp"/>
+        android:layout_margin="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv2"
+        app:layout_constraintStart_toEndOf="@id/tv2"
+        app:layout_constraintTop_toTopOf="@id/tv2" />
 
-    <TextView
-        android:id="@+id/tv3"
+    <Button
+        android:id="@+id/btnInsert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="173dp" />
-    <EditText
-        android:id="@+id/et3"
+        android:text="Crear"
+        android:layout_marginTop="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnEditarTrue"
+        app:layout_constraintTop_toBottomOf="@id/et2" />
+
+    <Button
+        android:id="@+id/btnEditar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/tv3"
-        app:layout_constraintTop_toTopOf="@id/tv3"/>
+        android:text="Editar"
+        android:layout_marginTop="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnInsert"
+        app:layout_constraintStart_toEndOf="@+id/btnEliminar"
+        app:layout_constraintTop_toBottomOf="@id/et2" />
+
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:layout_marginTop="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnEditarTrue"
+        app:layout_constraintTop_toBottomOf="@id/et2" />
+
+    <Button
+        android:id="@+id/btnEditarTrue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ejecutar Edicion"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btnEditar"
+        app:layout_constraintStart_toStartOf="@+id/btnEditar"
+        app:layout_constraintTop_toTopOf="@+id/btnEliminar" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
